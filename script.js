@@ -16,6 +16,7 @@ const songs = [
 const audio = document.getElementById("audio");
 const title = document.getElementById("title");
 const artist = document.getElementById("artist");
+const songCover = document.getElementById("songCover"); // ✅ ADD THIS
 const playlist = document.getElementById("playlist");
 
 songs.forEach(song => {
@@ -31,5 +32,6 @@ function playSong(song) {
   title.innerText = song.title;
   artist.innerText = song.artist;
   audio.src = song.src;
+  songCover.src = song.cover;   // ✅ THIS LINE WAS MISSING
   audio.play();
 }
